@@ -1,5 +1,6 @@
 call plug#begin('~/AppData/Local/nvim/plugged')
 Plug 'vim-airline/vim-airline' " Cool status bar
+Plug 'vim-airline/vim-airline-themes' " Themes for vim-airline
 Plug 'vim-syntastic/syntastic'
 Plug 'neoclide/coc.nvim', { 'branch': 'release' } " auto completion
 Plug 'preservim/nerdtree' " file navigation system
@@ -33,8 +34,18 @@ set cmdheight=1
 set shortmess+=c
 set signcolumn=yes
 
+let g:airline_theme='luna'
+" vim-airline customization
+"let g:airline_section_b = '%{strftime("%c")}'
+"let g:airline_section_y = 'BN: %{bufnr("%")}'
+
+" default shell should be git bash
+set shell=C:/Users/H457071/Desktop/Git/usr/bin/bash.exe
+" use escape to exit out of the terminal
+tnoremap <Esc> <C-\><C-n>
+
 " Default python interpreter
-" let g:python3_host_prog = 'D:/Anaconda/envs/py37/python.exe'
+ "let g:python3_host_prog = 'D:/Anaconda/envs/py37/python.exe'
 
 " May need for vim (not neovim) since coc.nvim calculate byte offset by count
 " utf-8 byte sequence.
