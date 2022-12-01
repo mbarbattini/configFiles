@@ -1,0 +1,5 @@
+require('plugins')
+require('base')
+require('keybinds')
+require('highlights')
+require('lualine-config')
